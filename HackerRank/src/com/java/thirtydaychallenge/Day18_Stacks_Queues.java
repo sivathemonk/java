@@ -45,21 +45,14 @@ public class Day18_Stacks_Queues {
 		//	System.out.print(st.pop() + "\t");
 		
 		System.out.print("\n");
+		boolean isPalindrome = true;
 		for(int i = 0; i < testarray.length; i++)
 				if(sol.popCharacter() != sol.dequeueCharacter()) {
-					System.out.println(" not a Palindrome");
+					//System.out.println(" not a Palindrome");
+					isPalindrome = false;
 					break;
 				}
-					
-		
-				else {
-					System.out.println("palindrome");
-					break;
-				}
-					
-			
-		
-		
+		//System.out.println(arg0);
 
 	}
 
