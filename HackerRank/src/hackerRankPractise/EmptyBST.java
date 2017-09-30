@@ -6,7 +6,7 @@ public boolean isEmpty() {
 }
 
 @Override
-public int cardinaliy() {
+public int cardinality() {
 	// TODO Auto-generated method stub
 	return 0;
 }
