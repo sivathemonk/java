@@ -7,11 +7,11 @@ package hackerRankPractise;
  * @author HP
  *
  */
-
-class Node{
-	Node left,right;
+/**
+class Node_BST{
+	Node_BST left,right;
 	int data, height;
-	Node(int data){
+	Node_BST(int data){
 		this.data = data;
 		left = right = null;
 		this.height=height;
@@ -54,7 +54,7 @@ public class Traversal {
 	}
 	/**
 	 * @param args
-	 */
+	 
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -63,3 +63,4 @@ public class Traversal {
 
 }
 }
+*/
