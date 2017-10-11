@@ -6,15 +6,17 @@ public class PrimeNumber {
 	public static boolean isPrime(int i) {
 		int k;
 		boolean caze = true;
-		if(i == 1)
+		if(i == 1 || i%2 == 0 && i !=2)
 			caze = false;
 		
-		for(k=1; k<i ;k ++) {
+		for(k=1; k<i ;k= k+2) {
 			
 			if(i % k == 0 )
 			{
-				caze = false;
-				break;
+				if(k!=1) {
+					caze = false;
+					break;
+				}
 			}
 			
 		
@@ -37,3 +39,6 @@ public class PrimeNumber {
 	}
 
 }
+
+
+// showing timeout
