@@ -1,31 +1,11 @@
-/**
- * 
- */
-package hackerRankPractise;
+package com.java.thirtydaychallenge;
 
-import java.util.LinkedList;
-import java.util.*;
+import java.util.Scanner;
 
-/**
- * @author HP
- *
- */
-public class HackathonHackerrank<D extends Comparable> {
+public class Day26_NestedLogic {
 
-	/**
-	 * @param args
-	 */
-	public static <D extends Comparable> boolean  compareTo(D date1,D date2) {
-		if( date2.compareTo(date1) > 0)
-			return true;
-		else
-			return false;
-	}
-	
-	public static <D extends Comparable> void main(String[] args) {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//HackathonHackerrank<D> sme = new HackathonHackerrank();
-		//LinkedList<D> = new LinkedList<D>();
 		Scanner sc = new Scanner(System.in);
 		int date1 = sc.nextInt();
 		int month1 = sc.nextInt();
@@ -58,7 +38,8 @@ public class HackathonHackerrank<D extends Comparable> {
 		//Date d1 = sc.nextLine();
 		//if(compareTo(date1, date2))
 		//	System.out.println(date2 date1);
-			//System.out.println(sme);
+			//System.out.println(sme)
+
 	}
 
 }
