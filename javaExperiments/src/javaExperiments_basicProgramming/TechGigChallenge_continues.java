@@ -24,54 +24,45 @@ Since the length of String is odd so we select the middle character i.e c and ap
 So the new String by appending all the selected characters is cbdae .
 Now, You have to reverse this process and get the original String i.e. "abcde".
  */
-public class TechGigChallenge {
-	
-	//static Stack s2 = new Stack();
-	//static Stack s3 = new Stack();
+
+public class TechGigChallenge_continues {
 
 	public static void main(String[] args) {
-		// TODO This is the original program to generate the string
-		String s = null;
+		// TODO Auto-generated method stub
+		//input String is encrypted: cbdae, generate abcde
 		Scanner sc = new Scanner(System.in);
-		s = sc.nextLine();
-		char[] s1 = s.toCharArray();
-		Stack s2 = new Stack();
-		for(char e:s1)
-			s2.push(e);
-		//for(int i = 0; i < s2.size(); i++)
-		//	System.out.print(s2);
-		Stack s3 = new Stack();
-		//s2.
+		String in = sc.nextLine();
+		char[] c = in.toCharArray();
+		Stack s = new Stack();
+		Queue q = new LinkedList();
+		for(char c1:c)
+			s.push(c1);
 		
-		while(!s2.empty()) {
-			int si = s2.size();
-			if(si % 2 == 0) {
-				s3.push(s2.elementAt(s2.size()/2 - 1));
-				s2.removeElementAt(s2.size()/2 - 1);
+		Stack out = new Stack();
+		
+		//while(!s.isEmpty()) {
+			if(s.size()%2 == 0) {
+				for(int i = 1 ; i < c.length ; i = i + 2)
+					q.add(c[i]);
+					
+				for(int i = c.length - 2 ; i > 0 ; i = i - 2)
+					q.add(c[i]);
 			}
 			else {
-				s3.push(s2.elementAt((s2.size()-1)/2));
-				s2.removeElementAt((s2.size()-1)/2);
+				for(int i = c.length - 2 ; i > 0 ; i = i - 2)
+					q.add(c[i]);
+				for(int i = 0 ; i < c.length ; i = i + 2)
+					q.add(c[i]);
 				
 			}
+		//}
 			
-		}
+			StringWriter sw = new StringWriter();
+			while(!q.isEmpty())
+				sw.append((char)q.poll());
+			System.out.println(sw.toString());
 		
-		System.out.println(s2);
-		StringWriter sw = new StringWriter();
-		while(!s3.isEmpty()) {
-			
-			char c1 = (char)s3.pop();
-			sw.append(c1);
-		}
-		System.out.println(sw.toString());
-		
-		
-		
-		
-		
-		
-		
+	
 
 	}
 
