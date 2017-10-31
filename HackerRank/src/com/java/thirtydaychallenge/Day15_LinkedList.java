@@ -58,9 +58,9 @@ class Day15_LinkedList {
 	}
 	public static void display(Node head) {
 		Node start = head;
-		while(start != null) {
-			System.out.print(start.data + " ");
-			start = start.next;
+		while(head != null) {
+			System.out.print(head.data + " ");
+			head = head.next;
 		}
 	}
 	/**
