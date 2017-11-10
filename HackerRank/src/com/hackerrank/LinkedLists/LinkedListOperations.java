@@ -20,6 +20,10 @@ public class LinkedListOperations {
 		return removeDuplicates(head.next);
 		//return head;
 	}
+	static Node removeFromPosition(Node head, int position) {
+		
+		return head;
+	}
 	
 	static Node Insert(Node head,int data) {
 		if(head == null) {
@@ -48,6 +52,20 @@ public class LinkedListOperations {
 		}
 	}
 	
+	static Node removeat(int rem, Node head) {
+		
+		if(head == null)
+			return null;
+		rem--;
+		while(rem -- >= 0) {
+			head=head.next;
+			if(rem == 0)
+				head = head.next;
+		}
+		return head;
+		
+	}
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -66,7 +84,10 @@ public class LinkedListOperations {
 		removeDuplicates(head);
 		System.out.printf("The output after removal of duplicates : ");
 		display(head);
-		
+		int rem = sc.nextInt();
+		removeat(rem,head);
+		System.out.print("Removing at index i \n");
+		display(head);
 
 	}
 
