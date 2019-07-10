@@ -33,13 +33,14 @@ int min = arr2[0];
 for( int i=1; i < arr2.length ; i++ ){
 	if(arr2[i] < min){ min = arr2[i] ; }
 }
-for( int i = 1 ; i < min ; i++ ){
+for( int i = 1 ; i <= min/lcm ; i++ ){
 	int cond = 0;
-	for(int j = 1 ; j < arr2.length ; j++ ){
-		if(arr2[j] % (lcm*i) == 0) {cond = 1;break;}
-		else { cond = 0; }
+	condi:
+	for(int j = 0 ; j < arr2.length ; j++ ){
+		if(arr2[j] % (lcm*i) == 0) {cond = 1;}
+		else { cond = 0; break condi; }
 	}
-	if(cond == 1){ count ++; System.out.println(lcm*i);}
+	if(cond == 1){ count ++; System.out.println(lcm*i + " " + min);}
 }
 	return count ;
 
